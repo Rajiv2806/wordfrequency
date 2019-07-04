@@ -1,10 +1,16 @@
 import os
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config.from_object(os.environ['APP_SETTINGS'])
+app.config.from_object(os.environ.get('APP_SETTINGS',"config.DevelopmentConfig"))
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+
+from models import Result
+
 print("*"*50)
-print(os.environ['APP_SETTINGS'])
+print(os.environ.get('APP_SETTINGS',"config.DevelopmentConfig"))
 print("*"*50)
 
 @app.route('/')
