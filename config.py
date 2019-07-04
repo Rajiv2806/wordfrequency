@@ -6,7 +6,7 @@ class Config(object):
     TESTING = False
     CSRF_ENABLED = True
     SECRET_KEY = 'Thisissecret'
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL',"postgresql://localhost/wordcounter2806")
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL',"postgresql://postgres:rajiv2806@localhost:5432/wordcounter2806")
 
 class ProductionConfig(Config):
     DEBUG = False
