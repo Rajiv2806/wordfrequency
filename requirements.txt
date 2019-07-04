@@ -1,2 +1,4 @@
 Flask
 gunicorn
+python-dotenv
+autoenv==1.0.0
