@@ -20,6 +20,7 @@ print("*"*50)
 def index():
     errors = []
     results = {}
+    print(">"*50)
     if request.method == "POST":
         # get url that the user has entered
         try:
