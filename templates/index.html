@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <title>Wordcount</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen" rel="stylesheet">
         <style>
               .container {
@@ -10,18 +10,17 @@
               }
         </style>
     </head>
-
     <body>
         <div class="container">
             <div class="row">
                 <div class="col-sm-5 col-sm-offset-1">
                     <h1>Wordcount 3000</h1>
                     <br>
-                    <form action='/' method='POST' role="form">
+                    <form role="form" method="POST" action="/">
                         <div class="form-group">
-                            <input autofocus class="form-control" id="url-box" name="url" placeholder="Enter URL..." required style="max-width: 300px;" type="text">
+                            <input type="text" name="url" autofocus class="form-control" id="url-box" placeholder="Enter URL..." required style="max-width: 300px;">
                         </div>
-                        <button class="btn btn-default" type="submit">Submit</button>
+                        <button type="submit" class="btn btn-default">Submit</button>
                     </form>
                     <br>
                     {% for error in errors %}
@@ -34,20 +33,21 @@
                         <h2>Frequencies</h2>
                         <br>
                         <div id="results">
-                            <table class="table table-strippes" style="max-width: 300px;">
+                            <table class="table table-striped" style="max-width: 300px;">
                                 <thead>
                                     <tr>
                                         <th>Word</th>
                                         <th>Count</th>
                                     </tr>
                                 </thead>
-                                {% for result in results %}
+                                {% for result in results%}
                                 <tr>
                                     <td>{{ result[0] }}</td>
                                     <td>{{ result[1] }}</td>
                                 </tr>
                                 {% endfor %}
                             </table>
+
                         </div>
                     {% endif %}
                 </div>

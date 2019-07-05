@@ -9,3 +9,5 @@ Flask-Script
 requests
 beautifulsoup4
 nltk
+redis
+rq==1.0
