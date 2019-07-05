@@ -6,3 +6,6 @@ Flask-SQLAlchemy
 psycopg2
 Flask-Migrate
 Flask-Script
+requests
+beautifulsoup4
+nltk
