@@ -22,7 +22,7 @@ def index():
     errors = []
     results = {}
     print(">"*50)
-    if request.method == "POST":
+    if request.method == "POST" or request.method == "GET":
         # get url that the user has entered
         try:
             url = request.form['url']
