@@ -18,6 +18,7 @@ print("*"*50)
 
 @app.route('/',methods=['POST','GET'])
 def index():
+    print("A" * 50)
     errors = []
     results = {}
     print(">"*50)
